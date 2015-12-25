@@ -4,13 +4,16 @@ filetype off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
-" originalrepos on github
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'derekwyatt/vim-scala.git'
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+  " originalrepos on github
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  NeoBundleFetch 'Shougo/vimproc'
+  NeoBundleFetch 'scrooloose/nerdtree'
+  NeoBundleFetch 'derekwyatt/vim-scala.git'
+
+call neobundle#end()
 
 filetype plugin indent on     " required!
 filetype indent on
